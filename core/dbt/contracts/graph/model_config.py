@@ -436,6 +436,7 @@ class SeedConfig(NodeConfig):
 
 @dataclass
 class TestConfig(NodeConfig):
+    schema: str = '__dbt_test_audit'
     materialized: str = 'test'
     severity: Severity = Severity('ERROR')
 
